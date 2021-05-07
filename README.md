@@ -4,3 +4,5 @@ Feed back and improvement suggestions would be much appreciated.
 # How to run:
 - You need to have glut installed to my knowledge. Idk I haven't tested without it.
 - For compiling: g++ simulation.cpp -lGL -lGLU -lglut -lm
+
+![Screen shot](https://github.com/Someguy1834/cpp-physics-simulation/blob/main/show-off.png?raw=true)
