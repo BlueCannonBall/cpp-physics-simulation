@@ -4,13 +4,13 @@
 #include <math.h>
 
 // Math functions
-double getpercent(double amount, double max, double outof) {
+inline double getpercent(double amount, double max, double outof) {
     return (outof / max) * amount;
 };
-double randomRage() {
+inline double randomRage() {
     return static_cast <double> (rand()) / static_cast <double> (RAND_MAX);
 };
-double ranMixMax(double min, double max) {
+inline double ranMixMax(double min, double max) {
     return min + randomRage() * (max - min);
 };
 double getDistance(double xA, double yA, double xB, double yB) { 
@@ -68,7 +68,7 @@ class World {
             ranMixMax(-1, 1), // Velocity X
             50 // Radius
         );
-        world.insert(std::pair<int, Entity>(nextID++, taret));
+        world.insert({nextID++, taret});
         entityCount++;
     };
 };
@@ -76,7 +76,7 @@ class World {
 World game;
 
 // Physics functions:
-bool getCollision(Entity entity, Entity target) {
+inline bool getCollision(Entity entity, Entity target) {
     return (getDistance(entity.position.x, entity.position.y, target.position.x, target.position.y) < entity.radius + target.radius);
 };
 

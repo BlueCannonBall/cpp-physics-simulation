@@ -1,2 +1,5 @@
 .vscode/
-a.out
+.clangd/
+compile_commands.json
+simulation
+
